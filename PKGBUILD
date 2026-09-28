@@ -12,7 +12,7 @@ source=("git+https://github.com/SuperMewio/5080-unlock-linux.git#branch=original
 sha256sums=('SKIP')
 
 package() {
-  local srcdirmod="$srcdir/5080-Unlock_Linux/omen_wmi_boost"
+  local srcdirmod="$srcdir/5080-unlock-linux/omen_wmi_boost"
   local installdir="$pkgdir/usr/src/omen-wmi-boost-$pkgver"
 
   # ---- DKMS source tree ----
@@ -20,7 +20,7 @@ package() {
   install -Dm644 "$srcdirmod/omen_wmi_boost.c" -t "$installdir/"
   install -Dm644 "$srcdirmod/Makefile"        -t "$installdir/"
 
-  # ---- dkms.conf (generated so the version always matches pkgver) ----
+  # ---- dkms.conf ----
   install -Dm644 /dev/stdin "$installdir/dkms.conf" <<EOF
 PACKAGE_NAME="omen-wmi-boost"
 PACKAGE_VERSION="$pkgver"
@@ -29,7 +29,7 @@ DEST_MODULE_LOCATION[0]="/updates/dkms"
 AUTOINSTALL="yes"
 EOF
 
-  # ---- Module options: max performance at load ----
+  # ---- Module options ----
   install -Dm644 /dev/stdin "$pkgdir/etc/modprobe.d/omen_wmi_boost.conf" <<EOF
 options omen_wmi_boost persist=1 auto_boost=1 thermal_profile=1
 EOF
@@ -39,9 +39,8 @@ EOF
 omen_wmi_boost
 EOF
 
-  # ---- License file (MIT requires preserving the notice) ----
-  # If LICENSE sits in the repo root:
-  install -Dm644 "$srcdir/5080-Unlock_Linux/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/"
-  # If it's inside omen_wmi_boost/ instead, use this line and delete the one above:
-  # install -Dm644 "$srcdirmod/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/"
+  # ---- License ----
+  install -Dm644 "$srcdir/5080-unlock-linux/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/"
+  # (if LICENSE is inside omen_wmi_boost/ instead:
+  #  install -Dm644 "$srcdirmod/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname/")
 }
