@@ -1,3 +1,11 @@
+WARNING! I am *not* a programmer. I used Kagi's AI feature to assist me with this. DO read the original README first *before* installing this. This *will* increase the heat of your device.
+
+If you want to install this for whatever reason, there is an artifact package located at https://github.com/SuperMewio/5080-unlock-linux/actions/runs/36364073084
+
+Just download the artifact, unzip it, and install it via pacman -U like you would any other local package.
+
+ORIGINAL README.md:
+
 # 5080 Unlock
 
 HP OMEN RTX 5080 Laptop GPU power unlock helper for Linux.
