@@ -1,4 +1,4 @@
-WARNING! I am *not* a programmer. I used Kagi's AI feature to assist me with this. DO read the original README first *before* installing this. This *will* increase the heat of your device.
+WARNING! I am *not* a programmer. I used Kagi's AI feature to assist me with making this package easier to install in ARCH via DKMS. DO read the original README first *before* installing this. This *will* increase the heat of your device.
 
 If you want to install this for whatever reason, there is an artifact package located at https://github.com/SuperMewio/5080-unlock-linux/actions/runs/36364073084
 
