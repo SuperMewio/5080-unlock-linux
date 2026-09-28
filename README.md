@@ -2,6 +2,8 @@ WARNING! I am *not* a programmer. I used Kagi's AI feature to assist me with mak
 
 If you want to install this for whatever reason, there is an artifact package located at https://github.com/SuperMewio/5080-unlock-linux/actions/runs/36364073084
 
+Requirements: You will need the matching headers for your kernel and DKMS.
+
 Just download the artifact, unzip it, and install it via pacman -U like you would any other local package.
 
 This is a branch of https://github.com/IzzieBoopers/5080-Unlock_Linux/tree/original-gpu-unlock-only, I did not create this at all other than the above to make it easier to install on arch systems for future use.
