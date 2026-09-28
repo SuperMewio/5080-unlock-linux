@@ -4,6 +4,8 @@ If you want to install this for whatever reason, there is an artifact package lo
 
 Just download the artifact, unzip it, and install it via pacman -U like you would any other local package.
 
+This is a branch of https://github.com/IzzieBoopers/5080-Unlock_Linux/tree/original-gpu-unlock-only, I did not create this at all other than the above to make it easier to install on arch systems for future use.
+
 ORIGINAL README.md:
 
 # 5080 Unlock
